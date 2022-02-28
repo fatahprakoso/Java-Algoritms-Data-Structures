@@ -5,36 +5,35 @@
  * @author Fatah Prakoso, fatahap27@gmail.com
  */
 
- // change to generic model soon
-public interface List {
+public interface List<T> {
 
     boolean isEmpty();
 
     int size();
 
-    void addFirst(Object dataNode);
+    void addFirst(T dataNode);
 
-    void addLast(Object dataNode);
+    void addLast(T dataNode);
 
-    void addBefore(Object dataNode, Object key);
+    void insertBefore(T dataNode, int index);
 
-    void addBefore(Object dataNode, int index);
+    void insertAfter(T dataNode, int indexKey);
 
-    void addAfter(Object dataNode, Object key);
+    void replace(T dataNode, T key);
 
-    void addAfter(Object dataNode, int indexKey);
+    void replace(T dataNode, int indexKey);
 
-    void replace(Object dataNode, Object key);
+    void removeHead();
 
-    void replace(Object dataNode, int indexKey);
+    void removeTail();
 
-    void removeFirst();
+    void removeFirstSearchedData(T key);
 
-    void removeLast();
+    void removeLastSearchedData(T key);
 
-    void remove(Object key);
+    void removeAllSearchedData(T key);
 
     void remove(int indexKey);
 
-    Object getData(int index);
+    T getData(int index);
 }
