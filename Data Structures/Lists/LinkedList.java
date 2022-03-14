@@ -259,6 +259,11 @@ public class LinkedList<T> implements List<T> {
 
   }
 
+  /**
+   * Remove specific node by index
+   *
+   * @param indexKey represented index of node that will be removed
+   */
   @Override
   public void remove(int indexKey) {
     if (!isIndexSafe(indexKey)) {
